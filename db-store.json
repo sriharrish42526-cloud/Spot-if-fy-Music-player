@@ -1,0 +1,338 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "driver1",
+      "passwordHash": "dbc42f1f9fb1ef88664f1eb417b970b69f0b418fb6daf4482ebdb65d22eb45a7"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "lose-my-mind",
+      "title": "Lose My Mind (feat. Doja Cat)",
+      "artist": "Doja Cat",
+      "album": "F1: The Movie OST",
+      "duration": "3:29",
+      "durationSec": 209,
+      "url": "/Lose My Mind _feat. Doja Cat_ _From F1_ The Movie_.mp3",
+      "cover": "/assets/album_art.png",
+      "key": "F# Minor",
+      "tempo": "124 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Instrumental Intro - Engines revving]"
+        },
+        {
+          "time": 4,
+          "text": "Yeah, I feel the speed, feel the heat rising up"
+        },
+        {
+          "time": 8,
+          "text": "We are running the redline, we can't get enough"
+        },
+        {
+          "time": 13,
+          "text": "Every corner we take, we are pushing the limit"
+        },
+        {
+          "time": 17,
+          "text": "If this is the race of our lives, we are in it"
+        },
+        {
+          "time": 22,
+          "text": "Oh, you make me lose my mind..."
+        },
+        {
+          "time": 27,
+          "text": "Going two hundred miles at the edge of the night"
+        },
+        {
+          "time": 32,
+          "text": "Lose my mind..."
+        },
+        {
+          "time": 37,
+          "text": "In the neon reflection, we fade out of sight"
+        },
+        {
+          "time": 42,
+          "text": "[Beat drop - Synth solo]"
+        },
+        {
+          "time": 50,
+          "text": "(Doja Cat)"
+        },
+        {
+          "time": 52,
+          "text": "Pedal to the metal, yeah we do it like that"
+        },
+        {
+          "time": 56,
+          "text": "Got the carbon body, hear the engine scream back"
+        },
+        {
+          "time": 61,
+          "text": "Formula 1, number one on the track"
+        },
+        {
+          "time": 65,
+          "text": "Lap after lap, yeah we never go back"
+        },
+        {
+          "time": 70,
+          "text": "We fly by, cloud nine, in the blink of an eye"
+        },
+        {
+          "time": 74,
+          "text": "You want a piece of the speed? Come and try"
+        },
+        {
+          "time": 78,
+          "text": "Oh, you make me lose my mind..."
+        },
+        {
+          "time": 83,
+          "text": "Going two hundred miles at the edge of the night"
+        },
+        {
+          "time": 88,
+          "text": "Lose my mind..."
+        },
+        {
+          "time": 93,
+          "text": "In the neon reflection, we fade out of sight"
+        },
+        {
+          "time": 98,
+          "text": "[Guitar Solo / Telemetry Peak]"
+        },
+        {
+          "time": 118,
+          "text": "Speeding through the darkness, chasing down the sun"
+        },
+        {
+          "time": 123,
+          "text": "We won't stop until the final lap is done"
+        },
+        {
+          "time": 128,
+          "text": "Do you feel the rush? Are you ready to fly?"
+        },
+        {
+          "time": 133,
+          "text": "Underneath the glow of the F1 sky"
+        },
+        {
+          "time": 138,
+          "text": "Lose my mind..."
+        },
+        {
+          "time": 143,
+          "text": "Yeah, you make me lose my mind..."
+        },
+        {
+          "time": 148,
+          "text": "[Outro - Engines fading out]"
+        }
+      ]
+    },
+    {
+      "id": "speed-demon",
+      "title": "Speed Demon",
+      "artist": "Redline Pulse",
+      "album": "Apex Legends",
+      "duration": "2:52",
+      "durationSec": 172,
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "cover": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=60",
+      "key": "C# Minor",
+      "tempo": "128 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Instrumental Opening]"
+        },
+        {
+          "time": 10,
+          "text": "Entering the track, no time for turning back"
+        },
+        {
+          "time": 20,
+          "text": "Got the eyes on the prize, shadows in the skies"
+        },
+        {
+          "time": 30,
+          "text": "Push the button, feel the kick, speed demon running quick"
+        },
+        {
+          "time": 40,
+          "text": "[Synthesizer Solo]"
+        }
+      ]
+    },
+    {
+      "id": "night-drive",
+      "title": "Night Drive",
+      "artist": "Gridrunner",
+      "album": "Outrun",
+      "duration": "3:10",
+      "durationSec": 190,
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "cover": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=150&auto=format&fit=crop&q=60",
+      "key": "A Major",
+      "tempo": "115 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Chill Electronic Beat]"
+        },
+        {
+          "time": 15,
+          "text": "Cruising under streetlights, fading in the warm night"
+        },
+        {
+          "time": 30,
+          "text": "Engine hums a slow tune, searching for the blue moon"
+        }
+      ]
+    },
+    {
+      "id": "apex-predator",
+      "title": "Apex Predator",
+      "artist": "Neon Spectre",
+      "album": "Monolith",
+      "duration": "3:04",
+      "durationSec": 184,
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+      "cover": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150&auto=format&fit=crop&q=60",
+      "key": "G Minor",
+      "tempo": "140 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Heavy Bass Drop]"
+        },
+        {
+          "time": 12,
+          "text": "In the shadow of the apex, we are the ones who hunt"
+        },
+        {
+          "time": 24,
+          "text": "Power steering, clutch control, driving deep into your soul"
+        }
+      ]
+    },
+    {
+      "id": "redline-pulse",
+      "title": "Redline Pulse",
+      "artist": "Circuit Board",
+      "album": "Velocity",
+      "duration": "2:42",
+      "durationSec": 162,
+      "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      "cover": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&auto=format&fit=crop&q=60",
+      "key": "D Minor",
+      "tempo": "122 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Chiptune Intro]"
+        },
+        {
+          "time": 8,
+          "text": "Pulse on the gauge, breaking the cage"
+        },
+        {
+          "time": 16,
+          "text": "Redline glow, here we go!"
+        }
+      ]
+    },
+    {
+      "id": "god-mode",
+      "title": "God Mode",
+      "artist": "Sons of Speed",
+      "album": "Velocity Single",
+      "duration": "3:40",
+      "durationSec": 220,
+      "url": "https://res.cloudinary.com/dwpaum6jz/video/upload/v1780337826/God_Mode_exhdfi.mp3",
+      "cover": "/assets/god_mode_cover.png",
+      "key": "B Minor",
+      "tempo": "135 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Heavy Industrial Synth Intro]"
+        },
+        {
+          "time": 10,
+          "text": "Enter God Mode... system online."
+        },
+        {
+          "time": 20,
+          "text": "Breaking the firewall, hacking the speed."
+        },
+        {
+          "time": 30,
+          "text": "We are the runners, we are the creed."
+        }
+      ]
+    },
+    {
+      "id": "raathu-raasan",
+      "title": "Raathu Raasan",
+      "artist": "Tamil Melody Kings",
+      "album": "Serenade Nights",
+      "duration": "4:12",
+      "durationSec": 252,
+      "url": "https://res.cloudinary.com/dwpaum6jz/video/upload/v1780337815/Raathu_Raasan_dyouxd.mp3",
+      "cover": "/assets/raathu_raasan_cover.png",
+      "key": "C Major",
+      "tempo": "95 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Flute and Starry Synth Intro]"
+        },
+        {
+          "time": 12,
+          "text": "Raathu Raasan... sweet night wind blowing."
+        },
+        {
+          "time": 24,
+          "text": "Stars are shining, melodies flowing."
+        }
+      ]
+    },
+    {
+      "id": "karuppa-kooda-va",
+      "title": "Karuppa Kooda Va",
+      "artist": "Village Folk Beats",
+      "album": "Harvest Rhythms",
+      "duration": "3:50",
+      "durationSec": 230,
+      "url": "https://res.cloudinary.com/dwpaum6jz/video/upload/v1780337815/Karuppa_Kooda_Va_e0lt4a.mp3",
+      "cover": "/assets/karuppa_kooda_cover.png",
+      "key": "G Major",
+      "tempo": "105 BPM",
+      "lyrics": [
+        {
+          "time": 0,
+          "text": "[Warm Sunset Folk Percussion Intro]"
+        },
+        {
+          "time": 15,
+          "text": "Karuppa Kooda Va... dance to the beat."
+        },
+        {
+          "time": 30,
+          "text": "Feel the dust rising under our feet."
+        }
+      ]
+    }
+  ],
+  "playlists": [],
+  "likes": {},
+  "history": {}
+}
