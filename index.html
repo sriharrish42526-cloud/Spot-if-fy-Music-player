@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redline Audio | Spotify Alike</title>
+  <meta name="description" content="A premium, F1-inspired Spotify clone featuring dynamic audio visualizers, custom playlists, and synced lyrics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-f1">
+  <div class="app-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo-container">
+        <svg class="logo-icon" viewBox="0 0 24 24" width="32" height="32">
+          <path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.892-.982-.336.076-.67-.135-.746-.472-.076-.336.135-.67.472-.746 3.856-.88 7.15-.506 9.818 1.13.295.18.387.566.208.863zm1.224-2.723c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.08-1.182-.413.125-.85-.107-.975-.52-.125-.413.107-.85.52-.975 3.666-1.112 8.232-.57 11.35 1.348.366.226.486.707.259 1.07zm.106-2.834C14.568 8.793 9.07 8.61 5.88 9.578c-.494.15-1.018-.13-1.168-.624-.15-.495.13-1.018.624-1.168 3.664-1.11 9.724-.902 13.593 1.396.446.265.592.84.327 1.286-.265.446-.84.592-1.286.327z"/>
+        </svg>
+        <span class="logo-text">REDLINE</span>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#" class="nav-item active" id="nav-home">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-search-menu">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <span>Search</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-library">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+          <span>Your Library</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- Playlists Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span>Playlists</span>
+          <button class="icon-btn-small" id="create-playlist-btn" title="Create Playlist">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          </button>
+        </div>
+        <ul class="playlist-list" id="sidebar-playlists">
+          <!-- Dynamic playlists load here -->
+        </ul>
+      </div>
+
+      <!-- Quick Controls -->
+      <div class="sidebar-section theme-panel">
+        <span class="section-title-small">Telemetry Theme</span>
+        <div class="theme-buttons">
+          <button class="theme-btn f1 active" data-theme="f1" title="F1 Racing Neon"></button>
+          <button class="theme-btn spotify" data-theme="spotify" title="Classic Green"></button>
+          <button class="theme-btn cyberpunk" data-theme="cyberpunk" title="Cyberpunk Cyan"></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="main-content">
+      <!-- Top Sticky Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-toggle" id="mobile-sidebar-toggle" aria-label="Toggle Navigation">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          </button>
+          <div class="search-bar-container hidden" id="header-search-container">
+            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" placeholder="Search for tracks, artists..." id="search-input" autocomplete="off">
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="user-badge">
+            <div class="avatar">S</div>
+            <span class="user-name">Driver 1</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dynamic Sections Wrapper -->
+      <div class="content-scroll-container">
+        <!-- Home Section -->
+        <section class="content-section" id="section-home">
+          <!-- Premium Hero Banner -->
+          <div class="hero-banner" id="hero-track-banner">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-badge">FEATURED SINGLE</span>
+              <h1 class="hero-title" id="hero-title-text">Lose My Mind</h1>
+              <p class="hero-subtitle">Doja Cat <span class="divider">•</span> From F1: The Movie</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary" id="hero-play-btn">
+                  <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                  <span>PLAY NOW</span>
+                </button>
+                <button class="btn btn-secondary" id="hero-like-btn">
+                  <svg viewBox="0 0 24 24" width="20" height="20" class="heart-icon"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                  <span>FAVORITE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Library Grid / Playlists Grid -->
+          <div class="dashboard-grid">
+            <div class="tracks-card">
+              <div class="card-header">
+                <h2>All Tracks</h2>
+                <span class="badge-total" id="tracks-count">5 tracks</span>
+              </div>
+              <div class="track-list-header">
+                <div class="col-index">#</div>
+                <div class="col-title">Title</div>
+                <div class="col-album">Album</div>
+                <div class="col-duration">Duration</div>
+              </div>
+              <div class="track-list" id="home-tracks-list">
+                <!-- Tracks dynamic load -->
+              </div>
+            </div>
+
+            <!-- telemetry / Visualizer Panel -->
+            <div class="telemetry-card">
+              <div class="card-header">
+                <h2>Engine Telemetry</h2>
+                <div class="visualizer-modes">
+                  <button class="vis-mode-btn active" data-mode="bars">BARS</button>
+                  <button class="vis-mode-btn" data-mode="wave">WAVE</button>
+                </div>
+              </div>
+              <div class="visualizer-container">
+                <canvas id="visualizer-canvas"></canvas>
+                <div class="telemetry-gauges">
+                  <div class="gauge">
+                    <div class="gauge-value" id="gauge-rpm">0</div>
+                    <div class="gauge-label">RPM (HZ)</div>
+                  </div>
+                  <div class="gauge">
+                    <div class="gauge-value" id="gauge-db">-Inf</div>
+                    <div class="gauge-label">BOOST (DB)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Playlist Section -->
+          <div class="playlist-row-container">
+            <div class="section-header">
+              <h2>Your Playlists</h2>
+            </div>
+            <div class="playlist-cards-grid" id="playlists-grid">
+              <!-- Load playlist cards -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="content-section hidden" id="section-search">
+          <div class="section-header">
+            <h2>Search Results</h2>
+          </div>
+          <div class="track-list" id="search-tracks-list">
+            <!-- Filtered search items go here -->
+          </div>
+          <div class="search-empty hidden" id="search-empty-state">
+            <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <p>No tracks found matching your query</p>
+          </div>
+        </section>
+
+        <!-- Playlist Detail Section -->
+        <section class="content-section hidden" id="section-playlist-detail">
+          <div class="playlist-detail-header">
+            <div class="playlist-detail-art" id="detail-playlist-art">
+              <svg viewBox="0 0 24 24" width="48" height="48"><path fill="currentColor" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </div>
+            <div class="playlist-detail-info">
+              <span class="playlist-detail-type">PLAYLIST</span>
+              <h1 class="playlist-detail-title" id="detail-playlist-name">Playlist Name</h1>
+              <p class="playlist-detail-meta" id="detail-playlist-meta">0 tracks</p>
+              <div class="playlist-detail-actions">
+                <button class="btn btn-primary" id="playlist-detail-play">PLAY</button>
+                <button class="btn btn-danger" id="playlist-detail-delete">DELETE</button>
+              </div>
+            </div>
+          </div>
+          <div class="track-list" id="playlist-detail-tracks">
+            <!-- Playlist tracklist loads here -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Right Drawer: Lyrics & Data -->
+    <aside class="right-drawer" id="right-drawer">
+      <div class="drawer-header">
+        <button class="tab-btn active" id="tab-lyrics">LYRICS</button>
+        <button class="tab-btn" id="tab-specs">DATA SHEET</button>
+      </div>
+      <div class="drawer-content">
+        <!-- Lyrics Panel -->
+        <div class="lyrics-panel active" id="panel-lyrics">
+          <div class="lyrics-scroll" id="lyrics-container">
+            <p class="lyric-line placeholder">Start playing a track with lyrics...</p>
+          </div>
+        </div>
+
+        <!-- Specs/Telemetry Details Panel -->
+        <div class="specs-panel" id="panel-specs">
+          <div class="spec-list">
+            <div class="spec-item">
+              <span class="spec-label">Track Key</span>
+              <span class="spec-value" id="spec-key">E Minor</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Tempo</span>
+              <span class="spec-value" id="spec-tempo">126 BPM</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Audio Stream</span>
+              <span class="spec-value" id="spec-source">Local MP3 File</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Bitrate</span>
+              <span class="spec-value">320kbps</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Engine Layout</span>
+              <span class="spec-value">Stereo 2.0</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Driver Co-Pilot</span>
+              <span class="spec-value">Antigravity AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Dynamic Bottom Player Bar -->
+  <footer class="player-bar">
+    <!-- Active Track Details -->
+    <div class="player-left">
+      <div class="active-track-art">
+        <img src="assets/album_art.png" alt="Album Art" id="player-album-art" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' width=\'48\' height=\'48\'><rect width=\'24\' height=\'24\' fill=\'%23222\'/><path fill=\'%23666\' d=\'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\'/></svg>'">
+      </div>
+      <div class="active-track-info">
+        <span class="track-name" id="player-track-title">Lose My Mind</span>
+        <span class="track-artist" id="player-track-artist">Doja Cat</span>
+      </div>
+      <button class="player-like-btn" id="player-like-btn" title="Add to Liked Songs">
+        <svg viewBox="0 0 24 24" width="18" height="18" class="heart-icon"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      </button>
+    </div>
+
+    <!-- Playback Controls and Seek Bar -->
+    <div class="player-center">
+      <div class="playback-controls">
+        <button class="control-btn" id="shuffle-btn" title="Shuffle">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
+        </button>
+        <button class="control-btn" id="prev-btn" title="Previous">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="control-btn play-btn" id="main-play-btn" title="Play / Pause">
+          <svg viewBox="0 0 24 24" width="28" height="28" id="play-icon"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        </button>
+        <button class="control-btn" id="next-btn" title="Next">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M6 18l8.5-6L6 6v12zM16 6v12h2V6z"/></svg>
+        </button>
+        <button class="control-btn" id="repeat-btn" title="Repeat (Off)">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+          <span class="repeat-indicator" id="repeat-indicator"></span>
+        </button>
+      </div>
+      <div class="progress-bar-container">
+        <span class="time-stamp" id="current-time">0:00</span>
+        <div class="slider-track" id="progress-container">
+          <div class="slider-fill" id="progress-bar"></div>
+          <div class="slider-thumb" id="progress-thumb"></div>
+        </div>
+        <span class="time-stamp" id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- Extra Controls -->
+    <div class="player-right">
+      <button class="control-btn" id="lyrics-toggle" title="Lyrics Toggle">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 12H7v-2h10v2zm0-4H7V9h10v2z"/></svg>
+      </button>
+      <button class="control-btn" id="queue-toggle" title="Queue List">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 15h12v-2H3v2zm0 4h12v-2H3v2zm0-8h12V9H3v2zm13-6v8l7-4-7-4z"/></svg>
+      </button>
+      <div class="volume-container">
+        <button class="control-btn" id="volume-btn" title="Mute/Unmute">
+          <svg viewBox="0 0 24 24" width="18" height="18" id="volume-icon"><path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        </button>
+        <div class="volume-track-container" id="volume-track-container">
+          <div class="volume-track-fill" id="volume-track-fill"></div>
+          <div class="volume-track-thumb" id="volume-track-thumb"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for Creating Playlists -->
+  <div class="modal-overlay hidden" id="playlist-modal">
+    <div class="modal-box">
+      <h3>Create New Playlist</h3>
+      <input type="text" id="playlist-name-input" placeholder="My Awesome Mix" maxlength="24">
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+        <button class="btn btn-primary" id="modal-submit-btn">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Queue Drawer -->
+  <div class="queue-drawer hidden" id="queue-drawer">
+    <div class="queue-header">
+      <h3>Play Queue</h3>
+      <button class="icon-btn-small" id="close-queue-btn">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </div>
+    <div class="queue-section">
+      <span class="queue-title-small">Now Playing</span>
+      <div class="queue-track-card now-playing" id="queue-now-playing">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+    <div class="queue-section flex-grow">
+      <span class="queue-title-small">Next Up</span>
+      <div class="queue-list" id="queue-list-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
